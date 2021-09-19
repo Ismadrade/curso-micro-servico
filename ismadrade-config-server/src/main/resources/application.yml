@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: ismadrade-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Ismadrade/ismadrade-config-server
+          #username: username
+          #password: password
+          default-label: main
+          search-paths:
+          - 'greeting-service*'

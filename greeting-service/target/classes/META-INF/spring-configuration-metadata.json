@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "greeting-service",
+      "type": "br.com.ismadrade.configuration.GreetingConfiguration",
+      "sourceType": "br.com.ismadrade.configuration.GreetingConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "greeting-service.default-value",
+      "type": "java.lang.String",
+      "sourceType": "br.com.ismadrade.configuration.GreetingConfiguration"
+    },
+    {
+      "name": "greeting-service.greeting",
+      "type": "java.lang.String",
+      "sourceType": "br.com.ismadrade.configuration.GreetingConfiguration"
+    }
+  ],
+  "hints": []
+}
