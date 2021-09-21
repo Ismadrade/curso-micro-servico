@@ -1,3 +1,6 @@
 ### IntelliJ IDEA ###
 /greeting-service/.idea
+/greeting-service/*.iws
+/greeting-service/*.iml
+/greeting-service/*.ipr
 /ismadrade-config-server/.idea
