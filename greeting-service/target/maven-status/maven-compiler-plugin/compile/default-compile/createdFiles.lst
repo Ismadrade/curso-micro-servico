@@ -1,5 +1,0 @@
-br\com\ismadrade\GreetingServiceApplication.class
-br\com\ismadrade\model\Greeting.class
-br\com\ismadrade\configuration\GreetingConfiguration.class
-br\com\ismadrade\controllers\GreetingController.class
-META-INF\spring-configuration-metadata.json

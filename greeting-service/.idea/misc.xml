@@ -3,8 +3,8 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../ismadrade-config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/../cambio-service/pom.xml" />
       </list>
     </option>
   </component>

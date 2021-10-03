@@ -7,16 +7,18 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="ismadrade-config-server" />
-        <module name="greeting-service" />
+        <module name="cambio-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cambio-service" target="15" />
       <module name="greeting-service" target="15" />
       <module name="ismadrade-config-server" target="15" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cambio-service" options="-parameters" />
       <module name="greeting-service" options="-parameters" />
       <module name="ismadrade-config-server" options="-parameters" />
     </option>

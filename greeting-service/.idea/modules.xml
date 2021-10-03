@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/greeting-service.iml" filepath="$PROJECT_DIR$/greeting-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cambio-service/cambio-service.iml" filepath="$PROJECT_DIR$/../cambio-service/cambio-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/../ismadrade-config-server/ismadrade-config-server.iml" filepath="$PROJECT_DIR$/../ismadrade-config-server/ismadrade-config-server.iml" />
     </modules>
   </component>
