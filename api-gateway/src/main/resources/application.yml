@@ -16,7 +16,8 @@ spring:
       routes:
       - id: cambio-service
         uri: lb://cambio-service
-        predicates:        - Path=/cambio-service/**
+        predicates:
+        - Path=/cambio-service/**
       - id: book-service
         uri: lb://book-service
         predicates:
@@ -27,4 +28,7 @@ spring:
         - Path=/v3/api-docs/**
         filters:
         - RewritePath=/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs   
-        
+
+  sleuth:
+    sampler:
+      probability: 1.0
