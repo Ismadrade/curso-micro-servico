@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  zipkin-server:
+    image: openzipkin/zipkin:2.23.2
+    ports:
+      - 9411:9411
+    networks:
+      - ismadrade-network
+  naming-server:
+    image: ismadrade/naming-server:0.0.1-SNAPSHOT
+    ports:
+      - 8761:8761
+    networks:
+      - ismadrade-network
+  api-gateway:
+    image: ismadrade/api-gateway:0.0.1-SNAPSHOT
+    ports:
+      - 8765:8765
+    depends_on:
+      - naming-server
+    environment:
+      SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+    networks:
+      - ismadrade-network        
+networks:
+  ismadrade-network:
+    driver: bridge      
