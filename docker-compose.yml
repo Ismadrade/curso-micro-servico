@@ -59,7 +59,30 @@ services:
       SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411
       EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
     networks:
-      - ismadrade-network        
+      - ismadrade-network
+  cambio-service:
+    image: ismadrade/cambio-service
+    restart: always
+    build:
+      context: .
+      dockerfile: cambio-service/Dockerfile
+    environment:
+      TZ: America/Sao_Paulo
+      SPRING.ZIPKIN.BASEURL: http://zipkin-server:9411
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-server:8761/eureka
+      SPRING.DATASOURCE.URL: jdbc:mysql://cambio-db:3308/cambio-service?useSSL=false&serverTimezone=UTC&enabledTLSProtocols=TLSv1.2
+      SPRING.DATASOURCE.USERNAME: root
+      SPRING.DATASOURCE.PASSWORD: admin123
+      SPRING.FLYWAY.URL: jdbc:mysql://cambio-db:3308/cambio-service?useSSL=false&serverTimezone=UTC&enabledTLSProtocols=TLSv1.2
+      SPRING.FLYWAY.USER: root
+      SPRING.FLYWAY.PASSWORD: admin123
+    ports:
+      - 8000:8000
+    depends_on:
+      - naming-server
+      - cambio-db    
+    networks:
+      - ismadrade-network            
 networks:
   ismadrade-network:
     driver: bridge      
