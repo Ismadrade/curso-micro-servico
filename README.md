@@ -27,7 +27,7 @@ Curso de microserviço com Leandro Costa, onde é abordado uma pequena estrutura
 
 # Rodando o Projeto no Docker:
 
-**Requisito: Ter o  _Docker_ e o _Docker Compose_ instalado**
+**Requisito: Ter o  _Docker_ e o _Docker Compose_ instalado.** <br/>
 Após baixar o projeto, entrar na pasta GithubActions através do terminal Linux ou PowerShell do Windows e rodar o seguinte comando:
 
 ```
