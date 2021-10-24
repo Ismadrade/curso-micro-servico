@@ -40,4 +40,3 @@ docker-compose up -d
 - Naming Server (Eureka): 8761
 - Cambio Service: 8000 
 - Book Service: 8100
-
